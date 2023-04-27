@@ -2,11 +2,11 @@
 
 ```sql
 create view func_depto as
-select count(f.codigo) as qtd, f.codDepto
+select count(f.codigo) as qtd, f.cod_depto
 from funcionario f
-group by f.codDepto;
+group by f.cod_depto;
 
-select d.sigla as departamento, g.nome as gerente, fd.qtd as funcionarios
-from func_depto fd left join departamento d on d.codigo=fd.codDepto
-left join funcionario g on d.codGerente = g.codigo;
+select d.descricao as departamento, g.nome as gerente, fd.qtd as funcionarios
+from func_depto fd left join departamento d on d.codigo=fd.cod_depto
+left join funcionario g on d.cod_gerente = g.codigo;
 ```
