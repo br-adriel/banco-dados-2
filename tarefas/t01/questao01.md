@@ -4,7 +4,7 @@
 CREATE VIEW salarios_dep_2 AS
 SELECT f.salario
 FROM funcionario f
-WHERE f.codDepto = 2;
+WHERE f.cod_depto = 2;
 
 SELECT f.nome
 FROM funcionario f
