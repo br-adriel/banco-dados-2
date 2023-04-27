@@ -2,15 +2,15 @@
 
 ```sql
 select
-  p.nome as nomeProjeto,
-  dp.sigla as depProjeto,
-  f.nome as nomeResponsavel,
-  df.sigla as depResponsavel
+  p.nome as nome_projeto,
+  dp.descricao as dep_projeto,
+  f.nome as nome_responsavel,
+  df.descricao as dep_responsavel
 from
   projeto p
-  join departamento dp on p.codDepto = dp.codigo
-  join funcionario f on p.codResponsavel = f.codigo
-  join departamento df on f.codDepto = df.codigo
+  join departamento dp on p.cod_depto = dp.codigo
+  join funcionario f on p.cod_responsavel = f.codigo
+  join departamento df on f.cod_depto = df.codigo
 where
   dp.codigo <> df.codigo;
 ```
