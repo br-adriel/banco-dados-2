@@ -33,15 +33,15 @@ END;
 $$;
 
 CREATE OR REPLACE FUNCTION func_idade_maior_media_depto()
-RETURNS TABLE(codigo int)
+RETURNS TABLE (codigo INTEGER, nome CHARACTER VARYING)
 LANGUAGE plpgsql
 AS
 $$
 BEGIN
 	RETURN QUERY 
-	SELECT f.codigo
-	FROM funcionario f
-	JOIN departamento d ON f.depto = d.codigo
-	WHERE idade_funcionario(f.codigo) > media_idade_departamento(f.depto);
+	SELECT funcionario.codigo, funcionario.nome
+	FROM funcionario
+	WHERE
+		idade_funcionario(funcionario.codigo) > media_idade_departamento(funcionario.depto);
 END;
 $$;
