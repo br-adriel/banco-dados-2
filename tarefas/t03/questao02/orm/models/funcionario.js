@@ -47,6 +47,12 @@ module.exports = (sequelize, DataTypes) => {
       },
       depto: {
         type: DataTypes.INTEGER,
+        references: {
+          model: 'departamento',
+          key: 'codigo',
+        },
+        onUpdate: 'CASCADE',
+        onDelete: 'SET NULL',
       },
     },
     {
