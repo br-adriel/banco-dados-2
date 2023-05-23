@@ -8,7 +8,7 @@
 Para executar a solução você precisa ter o [NodeJS e npm](https://nodejs.org/en)
 instalados em sua máquina
 
-1. Abra a pasta `questao2` no terminal
+1. Abra a pasta `questao02` no terminal
 
 2. Instale as dependências da resposta
 
