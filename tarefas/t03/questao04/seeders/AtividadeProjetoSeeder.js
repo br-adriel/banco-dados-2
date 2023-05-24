@@ -45,18 +45,16 @@ async function popular(quantidade = 1) {
     await loadProjetosPk();
     await loadAtividadesPk();
 
-    const registros = [];
     for (let i = 0; i < quantidade; i++) {
-      const dadosAtividadeProjeto = gerarDados();
-      registros.push(dadosAtividadeProjeto);
+      await AtividadeProjeto.create(gerarDados(), {
+        ignoreDuplicates: true,
+      });
     }
-
-    await AtividadeProjeto.bulkCreate(registros);
-    return true;
   } catch (error) {
     // console.error(error);
     return false;
   }
+  return true;
 }
 
 module.exports = {

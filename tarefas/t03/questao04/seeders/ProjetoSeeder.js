@@ -10,12 +10,12 @@ let equipesPk;
 
 async function loadDepartamentosPk() {
   const departamentos = await Departamento.findAll({ limit: 200 });
-  departamentosPk = [null, ...departamentos.map((d) => d.dataValues.coldigo)];
+  departamentosPk = [null, ...departamentos.map((d) => d.dataValues.codigo)];
 }
 
 async function loadResponsaveisPk() {
   const responsaveis = await Funcionario.findAll({ limit: 200 });
-  responsaveisPk = [null, ...responsaveis.map((s) => s.dataValues.coldigo)];
+  responsaveisPk = [null, ...responsaveis.map((s) => s.dataValues.codigo)];
 }
 
 async function loadEquipesPk() {

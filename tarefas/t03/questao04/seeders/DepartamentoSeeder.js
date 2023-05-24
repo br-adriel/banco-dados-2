@@ -5,7 +5,7 @@ const Funcionario = require('../models/Funcionario.js');
 let gerentesPk;
 async function loadGerentesPk() {
   const gerentes = await Funcionario.findAll({ limit: 200 });
-  gerentesPk = [null, ...gerentes.map((s) => s.dataValues.coldigo)];
+  gerentesPk = [null, ...gerentes.map((s) => s.dataValues.codigo)];
 }
 
 /**
@@ -18,7 +18,7 @@ async function loadGerentesPk() {
  * }} Objeto contendo os dados falsos gerados.
  */
 function gerarDados() {
-  const sigla = faker.lorem.word().toUpperCase().substring(0, 15);
+  const sigla = faker.string.uuid().substring(0, 15);
   const descricao = faker.lorem.sentence().substring(0, 25);
   const gerente = faker.helpers.arrayElement(gerentesPk);
 

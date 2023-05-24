@@ -8,12 +8,12 @@ let equipesPk;
 
 async function loadEquipesPk() {
   const equipes = await Equipe.findAll({ limit: 200 });
-  equipesPk = equipes.map((e) => e.dataValues.coldigo);
+  equipesPk = equipes.map((e) => e.dataValues.codigo);
 }
 
 async function loadFuncionariosPk() {
   const funcionarios = await Funcionario.findAll({ limit: 200 });
-  funcionariosPk = funcionarios.map((f) => f.dataValues.coldigo);
+  funcionariosPk = funcionarios.map((f) => f.dataValues.codigo);
 }
 
 /**

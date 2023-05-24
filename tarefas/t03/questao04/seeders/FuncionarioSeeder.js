@@ -7,12 +7,12 @@ let supervisoresPk;
 
 async function loadDepartamentosPk() {
   const departamentos = await Departamento.findAll({ limit: 200 });
-  departamentosPk = [null, ...departamentos.map((d) => d.dataValues.coldigo)];
+  departamentosPk = [null, ...departamentos.map((d) => d.dataValues.codigo)];
 }
 
 async function loadSupervisoresPk() {
   const supervisores = await Funcionario.findAll({ limit: 200 });
-  supervisoresPk = [null, ...supervisores.map((s) => s.dataValues.coldigo)];
+  supervisoresPk = [null, ...supervisores.map((s) => s.dataValues.codigo)];
 }
 
 /**
