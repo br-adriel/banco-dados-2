@@ -1,4 +1,4 @@
-# Resposta da questão 4
+# Resposta da questão 5
 
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
@@ -9,7 +9,7 @@
 Para executar a solução você precisa ter o [NodeJS e npm](https://nodejs.org/en)
 instalados em sua máquina
 
-1. Abra a pasta `questao04` no terminal
+1. Abra a pasta `questao05` no terminal
 
 2. Instale as dependências da resposta
 
