@@ -56,8 +56,6 @@ RETURN QUERY
 		LEFT JOIN atividade_projeto ap ON p.codigo = ap.codprojeto
 		LEFT JOIN atividade a ON a.codigo = ap.codatividade
 	GROUP BY p.codigo, f.nome
-	ORDER BY atividades DESC
-	LIMIT 1000;
 END;
 $$
 LANGUAGE plpgsql;
